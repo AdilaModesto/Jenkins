@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'copy /Y ProjetoJenkins.jar "C:\\Users\\DELL\\OneDrive\\Documentos\\Faculdade\\3 ANO\\II SEMESTRE\\Engenharia de Software 2\\Laboratórios\\Jenkins\\ProjetoJenkins.jar"'
+                bat 'copy /Y ProjetoJenkins.jar "C:\\Adila\\ProjetoJenkins.jar"'
             }
         }
     }
