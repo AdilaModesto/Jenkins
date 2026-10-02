@@ -16,16 +16,15 @@ pipeline {
         }
  //Para fazer deploy, é necessário empacotar o projeto em um arquivo .jar e copiar para a pasta de deploy.  CD
         stage('Empacotar') {
-    steps {
-        bat 'jar --create --file ProjetoJenkins.jar --main-class Main Main.class'
-    }
-}
+            steps {
+                bat 'jar --create --file ProjetoJenkins.jar --main-class Main Main.class'
+            }
+        }
 
-stage('Deploy') {
-    steps {
-        bat 'if not exist C:\\deploy mkdir C:\\deploy'
-        bat 'copy /Y ProjetoJenkins.jar C:\\deploy\\ProjetoJenkins.jar'
-    }
-}
+        stage('Deploy') {
+            steps {
+                bat 'copy /Y ProjetoJenkins.jar C:\\Users\\DELL\\OneDrive\\Documentos\\Faculdade\\3 ANO\\II SEMESTRE\\Engenharia de Software 2\\Laboratórios\\Jenkins\\ProjetoJenkins.jar'
+            }
+        }
     }
 }
